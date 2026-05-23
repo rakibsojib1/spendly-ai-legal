@@ -1,0 +1,1 @@
+# spendly-ai-legal
