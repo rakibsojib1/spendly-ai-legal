@@ -1,45 +1,225 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Privacy Policy - Spendly AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:auto;padding:40px 20px;line-height:1.8;background:#f9fafb;color:#111827}
-h1,h2{color:#111827}
-.card{background:#fff;padding:32px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+:root{
+  --bg-gradient: radial-gradient(circle at top, #1e293b 0%, #0f172a 45%, #020617 100%);
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #cbd5e1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Plus Jakarta Sans',Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-dim);
+  min-height: 100vh;
+  line-height: 1.8;
+}
+.container{
+  max-width: 920px;
+  margin: auto;
+  padding: 50px 20px;
+}
+.card{
+  padding: 44px;
+  border: 1px solid var(--card-border);
+  border-radius: 26px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--card-border);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.back-link:hover {
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+.btn-play-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-play-mini:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn-play-mini svg {
+  width: 16px;
+  height: 16px;
+}
+h1{
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.effective-date {
+  display: inline-block;
+  color: #a5b4fc;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+p{
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+ul{
+  padding-left: 22px;
+  margin-bottom: 18px;
+}
+li{
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+strong{
+  color: #fff;
+}
+a{
+  color: #a5b4fc;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.footer-note {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--card-border);
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .card { padding: 28px 20px; border-radius: 20px; }
+  .container { padding: 24px 14px; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 <div class="card">
-<h1>Privacy Policy</h1>
-<p>Effective Date: May 23, 2026</p>
-<p>Spendly AI respects your privacy. This Privacy Policy explains how information is collected, used, and protected when you use the Spendly AI mobile application.</p>
-<h2>Information We Collect</h2>
-<ul>
-<li>Name and email address during account registration</li>
-<li>Financial or expense-related data entered by users</li>
-<li>Device information and app usage analytics</li>
-</ul>
-<h2>How We Use Information</h2>
-<ul>
-<li>Provide and improve app functionality</li>
-<li>Store and sync user data securely</li>
-<li>Provide authentication and account management</li>
-<li>Improve user experience and app performance</li>
-</ul>
-<h2>Firebase Services</h2>
-<p>Spendly AI may use Firebase services provided by <strong>Google</strong> for authentication, analytics, cloud storage, and database functionality.</p>
-<h2>Data Security</h2>
-<p>We use reasonable security measures to protect user data from unauthorized access or disclosure.</p>
-<h2>Third-Party Services</h2>
-<p>The app may use trusted third-party services such as Google Firebase.</p>
-<h2>Children's Privacy</h2>
-<p>Spendly AI is not intended for children under 13 years of age.</p>
-<h2>Changes to This Policy</h2>
-<p>This Privacy Policy may be updated from time to time. Changes will be reflected on this page.</p>
-<h2>Contact</h2>
-<p>For questions regarding this Privacy Policy, contact the developer through the app listing or repository owner profile.</p>
+  <div class="nav-header">
+    <a class="back-link" href="index.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Legal Center
+    </a>
+    <a class="btn-play-mini" href="https://play.google.com/store/apps/details?id=com.spendlyai.app" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3.6 2.5a1.2 1.2 0 0 0-.3.8v17.4c0 .3.1.6.3.8l.1.1 9.8-9.8v-.2L3.7 2.4l-.1.1z" fill="#00e676"/>
+        <path d="M16.7 14.8l-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.1-.1 0z" fill="#ffeb3b"/>
+        <path d="M13.5 11.6L3.6 21.5c.4.4 1 .4 1.5.1l11.6-6.6-3.2-3.4z" fill="#f44336"/>
+        <path d="M13.5 11.6l3.2-3.2-11.6-6.6C4.6 1.5 4 1.5 3.6 1.9l9.9 9.7z" fill="#00e5ff"/>
+      </svg>
+      View on Google Play
+    </a>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <div class="effective-date">Effective Date: May 23, 2026 &bull; Spendly AI</div>
+
+  <p><strong>Spendly AI</strong> ("we", "our", or "us") respects your privacy and is committed to protecting your personal and financial information. This Privacy Policy outlines our data handling practices for the Spendly AI mobile application (Package: <code>com.spendlyai.app</code>).</p>
+
+  <h2>1. Information We Collect</h2>
+  <p>To provide personal expense tracking and budgeting tools, Spendly AI may collect the following categories of information:</p>
+  <ul>
+    <li><strong>Account Information:</strong> Name, email address, and profile photo when registering or authenticating via Google Sign-In or email.</li>
+    <li><strong>Financial &amp; Expense Data:</strong> Records of transactions, expense amounts, income entries, categories, notes, and budgets entered by you.</li>
+    <li><strong>Audio / Voice Input:</strong> Voice commands recorded temporarily if you use speech-to-text to input expenses (voice data is processed for transcription and not stored permanently).</li>
+    <li><strong>Device &amp; Usage Information:</strong> Device model, operating system version, anonymous diagnostic identifiers, app crash logs, and performance statistics.</li>
+  </ul>
+
+  <h2>2. How We Use Your Information</h2>
+  <p>We use the collected information for the following purposes:</p>
+  <ul>
+    <li>To provide, personalize, and synchronize your expense and budget records across your devices.</li>
+    <li>To authenticate users and ensure authorized account access.</li>
+    <li>To deliver reminders and push notifications for budget alerts and periodic summaries.</li>
+    <li>To monitor application stability, detect bugs, and enhance overall performance.</li>
+  </ul>
+
+  <h2>3. Third-Party Services &amp; Infrastructure</h2>
+  <p>Spendly AI integrates trusted third-party service providers that process data under industry-standard security protocols:</p>
+  <ul>
+    <li><strong>Google Firebase:</strong> Used for secure user authentication (Firebase Auth), real-time cloud database storage (Cloud Firestore), and push notifications (Firebase Cloud Messaging).</li>
+    <li><strong>Google Mobile Ads (AdMob):</strong> Used to deliver non-personalized or personalized advertisements. AdMob may collect and process device identifiers in compliance with Google Play Developer policies.</li>
+    <li><strong>Google Play Billing:</strong> When purchasing subscriptions or premium features, transactions are handled exclusively by Google Play. We do not store or process your credit card or payment credentials.</li>
+  </ul>
+
+  <h2>4. Data Security</h2>
+  <p>We implement appropriate technical, administrative, and physical safeguards to protect user data from unauthorized access, alteration, disclosure, or destruction. All network communication between the app and backend services is encrypted using HTTPS / TLS protocols.</p>
+
+  <h2>5. Data Retention and Deletion</h2>
+  <p>We retain your personal data for as long as your account remains active. You may request the permanent deletion of your account and all associated transaction records at any time. For instructions on how to request account deletion, please visit our <a href="account-delete.html">Account Deletion Page</a>.</p>
+
+  <h2>6. Children's Privacy</h2>
+  <p>Spendly AI is not directed to children under 13 years of age (or under 16 in certain jurisdictions), and we do not knowingly collect personal information from children.</p>
+
+  <h2>7. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy periodically to reflect changes in our practices or regulatory requirements. Any updates will be published on this page with an updated effective date.</p>
+
+  <h2>8. Contact Us</h2>
+  <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:</p>
+  <p><strong>Developer:</strong> RakibSojib<br>
+  <strong>Email:</strong> <a href="mailto:rakibsojib77777@gmail.com">rakibsojib77777@gmail.com</a><br>
+  <strong>Official Package:</strong> com.spendlyai.app</p>
+
+  <div class="footer-note">
+    <span>&copy; 2026 Spendly AI. All rights reserved.</span>
+    <a href="terms-and-conditions.html">Terms &amp; Conditions &rarr;</a>
+  </div>
+</div>
 </div>
 </body>
 </html>

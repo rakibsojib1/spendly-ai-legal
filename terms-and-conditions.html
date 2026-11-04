@@ -1,54 +1,211 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Terms &amp; Conditions - Spendly AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:auto;padding:40px 20px;line-height:1.8;background:#f9fafb;color:#111827}
-h1,h2{color:#111827}
-.card{background:#fff;padding:36px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-ul{padding-left:22px}
-li{margin-bottom:8px}
-a{color:#4f46e5;text-decoration:none}
-a:hover{text-decoration:underline}
-.back-link{display:inline-block;margin-bottom:20px;font-weight:600;color:#6366f1}
+:root{
+  --bg-gradient: radial-gradient(circle at top, #1e293b 0%, #0f172a 45%, #020617 100%);
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #cbd5e1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Plus Jakarta Sans',Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-dim);
+  min-height: 100vh;
+  line-height: 1.8;
+}
+.container{
+  max-width: 920px;
+  margin: auto;
+  padding: 50px 20px;
+}
+.card{
+  padding: 44px;
+  border: 1px solid var(--card-border);
+  border-radius: 26px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--card-border);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.back-link:hover {
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+.btn-play-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-play-mini:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn-play-mini svg {
+  width: 16px;
+  height: 16px;
+}
+h1{
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.effective-date {
+  display: inline-block;
+  color: #a5b4fc;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+p{
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+ul{
+  padding-left: 22px;
+  margin-bottom: 18px;
+}
+li{
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+strong{
+  color: #fff;
+}
+a{
+  color: #a5b4fc;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.footer-note {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--card-border);
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .card { padding: 28px 20px; border-radius: 20px; }
+  .container { padding: 24px 14px; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 <div class="card">
-<a class="back-link" href="index.html">&larr; Back to Legal Center</a>
-<h1>Terms &amp; Conditions</h1>
-<p><strong>Effective Date:</strong> May 23, 2026</p>
-<p>Welcome to <strong>Spendly AI</strong>. By downloading, accessing, or using our mobile application, you agree to be bound by these Terms and Conditions.</p>
+  <div class="nav-header">
+    <a class="back-link" href="index.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Legal Center
+    </a>
+    <a class="btn-play-mini" href="https://play.google.com/store/apps/details?id=com.spendlyai.app" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3.6 2.5a1.2 1.2 0 0 0-.3.8v17.4c0 .3.1.6.3.8l.1.1 9.8-9.8v-.2L3.7 2.4l-.1.1z" fill="#00e676"/>
+        <path d="M16.7 14.8l-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.1-.1 0z" fill="#ffeb3b"/>
+        <path d="M13.5 11.6L3.6 21.5c.4.4 1 .4 1.5.1l11.6-6.6-3.2-3.4z" fill="#f44336"/>
+        <path d="M13.5 11.6l3.2-3.2-11.6-6.6C4.6 1.5 4 1.5 3.6 1.9l9.9 9.7z" fill="#00e5ff"/>
+      </svg>
+      View on Google Play
+    </a>
+  </div>
 
-<h2>1. Use of the Application</h2>
-<p>Spendly AI is designed to help users track personal expenses, budgets, and financial records. You agree to use Spendly AI only for lawful purposes and in accordance with these Terms.</p>
+  <h1>Terms &amp; Conditions</h1>
+  <div class="effective-date">Effective Date: May 23, 2026 &bull; Spendly AI</div>
 
-<h2>2. User Accounts &amp; Security</h2>
-<p>You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.</p>
+  <p>Welcome to <strong>Spendly AI</strong>. By downloading, accessing, or using the Spendly AI mobile application (Package: <code>com.spendlyai.app</code>), you agree to comply with and be bound by the following Terms and Conditions.</p>
 
-<h2>3. In-App Purchases &amp; Subscriptions</h2>
-<p>Spendly AI may offer premium features, services, or subscriptions via Google Play In-App Purchases. All billing transactions, renewals, cancellations, and refunds are managed directly by <strong>Google Play</strong> in accordance with Google Play’s Terms of Service and refund policies.</p>
+  <h2>1. Use of the Application</h2>
+  <p>Spendly AI is designed to help users track personal expenses, manage budgets, and organize financial records. You agree to use the application solely for lawful purposes and in accordance with all applicable local, national, and international laws.</p>
 
-<h2>4. Advertisements &amp; Third-Party Services</h2>
-<p>The application may display advertisements served by third-party ad networks (such as <strong>Google AdMob</strong>) and utilizes backend services (such as <strong>Google Firebase</strong>) for authentication and database management. Your interactions with third-party advertisers or services are governed by their respective terms and privacy policies.</p>
+  <h2>2. User Accounts &amp; Security</h2>
+  <p>You are responsible for maintaining the confidentiality of your account credentials. You agree that any activity conducted under your account is your sole responsibility. In the event of unauthorized access, please notify us immediately.</p>
 
-<h2>5. Data Accuracy &amp; Financial Disclaimer</h2>
-<p>Spendly AI is a personal expense management and productivity tool. It does not provide certified financial, accounting, investment, or legal advice. Users are solely responsible for verifying the accuracy of all financial transactions and reports entered into or exported from the app.</p>
+  <h2>3. In-App Purchases &amp; Subscriptions</h2>
+  <p>Spendly AI may offer premium features, services, or subscriptions via Google Play In-App Purchases. All billing transactions, renewals, cancellations, and refunds are managed directly by <strong>Google Play</strong> in accordance with Google Play’s Terms of Service and refund policies.</p>
 
-<h2>6. Trader Status &amp; Consumer Rights (EEA &amp; UK)</h2>
-<p>The developer account operates as a declared trader under applicable digital marketplace regulations. If you reside in the European Economic Area (EEA) or the United Kingdom, statutory consumer protection rights apply to your digital content and services acquired through Google Play.</p>
+  <h2>4. Advertisements &amp; Third-Party Services</h2>
+  <p>The application may display advertisements served by third-party ad networks (such as <strong>Google AdMob</strong>) and utilizes backend services (such as <strong>Google Firebase</strong>) for authentication and cloud database management. Your interactions with third-party advertisers or services are governed by their respective terms and privacy policies.</p>
 
-<h2>7. Limitation of Liability</h2>
-<p>Spendly AI is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. To the maximum extent permitted by applicable law, the developer and affiliates shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the service.</p>
+  <h2>5. Data Accuracy &amp; Financial Disclaimer</h2>
+  <p>Spendly AI is a personal expense management and productivity tool. It does not provide certified financial, accounting, investment, or legal advice. Users are solely responsible for verifying the accuracy of all financial transactions and reports entered into or exported from the app.</p>
 
-<h2>8. Modifications to Terms</h2>
-<p>We may update or revise these Terms and Conditions from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the app after changes indicates your acceptance of the revised Terms.</p>
+  <h2>6. Trader Status &amp; Consumer Rights (EEA &amp; UK)</h2>
+  <p>The developer account operates as a declared trader under applicable digital marketplace regulations. If you reside in the European Economic Area (EEA) or the United Kingdom, statutory consumer protection rights apply to your digital content and services acquired through Google Play.</p>
 
-<h2>9. Contact Information</h2>
-<p>For questions, support, or inquiries regarding these Terms &amp; Conditions, please contact us at:</p>
-<p><strong>Email:</strong> <a href="mailto:rakibsojib77777@gmail.com">rakibsojib77777@gmail.com</a></p>
+  <h2>7. Limitation of Liability</h2>
+  <p>Spendly AI is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. To the maximum extent permitted by applicable law, the developer and affiliates shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the service.</p>
+
+  <h2>8. Modifications to Terms</h2>
+  <p>We reserve the right to revise or update these Terms and Conditions at any time. Continued use of the application after changes are posted constitutes your acceptance of the revised terms.</p>
+
+  <h2>9. Contact Information</h2>
+  <p>For inquiries, support, or questions regarding these Terms &amp; Conditions, please reach out to:</p>
+  <p><strong>Developer:</strong> RakibSojib<br>
+  <strong>Email:</strong> <a href="mailto:rakibsojib77777@gmail.com">rakibsojib77777@gmail.com</a><br>
+  <strong>Official Package:</strong> com.spendlyai.app</p>
+
+  <div class="footer-note">
+    <span>&copy; 2026 Spendly AI. All rights reserved.</span>
+    <a href="privacy-policy.html">Privacy Policy &rarr;</a>
+  </div>
+</div>
 </div>
 </body>
 </html>

@@ -3,52 +3,305 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Spendly AI Legal Center</title>
+<title>Spendly AI - Legal &amp; Policy Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(circle at top,#1e293b 0,#0f172a 48%,#020617 100%);color:#e2e8f0}
-.container{max-width:1080px;margin:auto;padding:64px 20px}
-.hero{padding:44px;border:1px solid rgba(255,255,255,.08);border-radius:30px;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(99,102,241,.16);color:#c7d2fe;font-size:13px;letter-spacing:.02em}
-h1{margin:18px 0 14px;font-size:54px;line-height:1.05}
-.lead{max-width:760px;font-size:18px;line-height:1.8;color:#cbd5e1;margin:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
-.card{padding:24px;border-radius:22px;background:linear-gradient(180deg,rgba(30,41,59,.95),rgba(15,23,42,.95));border:1px solid rgba(255,255,255,.08)}
-.card h2{margin:0 0 10px;font-size:22px}
-.card p{margin:0;color:#cbd5e1;line-height:1.7}
-.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:16px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.08)}
-.primary{background:#6366f1;color:white}
-.secondary{background:rgba(255,255,255,.04);color:#e2e8f0}
-.meta{margin-top:26px;font-size:14px;color:#94a3b8;line-height:1.7}
-.rule{height:1px;background:rgba(255,255,255,.08);margin:28px 0}
-.small{font-size:13px;color:#94a3b8;line-height:1.6}
+:root{
+  --bg-gradient: radial-gradient(circle at top, #1e293b 0%, #0f172a 45%, #020617 100%);
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+  --play-green: #00875f;
+  --play-hover: #00704f;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #cbd5e1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Plus Jakarta Sans',Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.container{
+  max-width: 1080px;
+  margin: auto;
+  padding: 60px 24px;
+}
+.hero{
+  padding: 48px;
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #c7d2fe;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+h1{
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lead{
+  max-width: 760px;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+  color: var(--text-dim);
+  margin-bottom: 32px;
+}
+.hero-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 24px;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+.btn-play:hover {
+  background: #111;
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+.btn-play svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.play-text {
+  text-align: left;
+  line-height: 1.2;
+}
+.play-text span {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  display: block;
+}
+.play-text strong {
+  font-size: 14px;
+  color: #fff;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+.card{
+  padding: 28px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.85));
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: #a5b4fc;
+}
+.card h2{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.card p{
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+.card-link:hover {
+  color: #fff;
+  gap: 12px;
+}
+.rule{
+  height: 1px;
+  background: var(--card-border);
+  margin: 36px 0 24px;
+}
+.meta-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.meta-footer a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+.meta-footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .hero { padding: 28px 20px; border-radius: 20px; }
+  .container { padding: 30px 16px; }
+}
 </style>
 </head>
 <body>
 <div class="container">
 <section class="hero">
-<span class="badge">Official Legal Center</span>
-<h1>Spendly AI</h1>
-<p class="lead">Official legal documents for the Spendly AI mobile application, including privacy practices, terms of use, and related policy information.</p>
-<div class="grid">
-<article class="card">
-<h2>Privacy Policy</h2>
-<p>Learn what information is collected, how it is used, and how user data is protected inside Spendly AI.</p>
-</article>
-<article class="card">
-<h2>Terms &amp; Conditions</h2>
-<p>Review the rules, responsibilities, and limitations related to the use of Spendly AI services.</p>
-</article>
-</div>
-<div class="actions">
-<a class="btn primary" href="privacy-policy.html">Open Privacy Policy →</a>
-<a class="btn secondary" href="terms-and-conditions.html">Open Terms &amp; Conditions →</a>
-</div>
-<div class="rule"></div>
-<p class="meta">Developer: RakibSojib<br>Application: Spendly AI<br>Last Updated: May 23, 2026</p>
-<p class="small">This website is maintained for official app policy and legal reference purposes.</p>
+  <div class="top-bar">
+    <span class="badge"><span class="badge-dot"></span> Official Legal Center</span>
+  </div>
+
+  <h1>Spendly AI</h1>
+  <p class="lead">Official legal policies, compliance documents, and terms of service for the Spendly AI mobile application.</p>
+
+  <div class="hero-cta">
+    <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.spendlyai.app" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3.6 2.5a1.2 1.2 0 0 0-.3.8v17.4c0 .3.1.6.3.8l.1.1 9.8-9.8v-.2L3.7 2.4l-.1.1z" fill="#00e676"/>
+        <path d="M16.7 14.8l-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.1-.1 0z" fill="#ffeb3b"/>
+        <path d="M13.5 11.6L3.6 21.5c.4.4 1 .4 1.5.1l11.6-6.6-3.2-3.4z" fill="#f44336"/>
+        <path d="M13.5 11.6l3.2-3.2-11.6-6.6C4.6 1.5 4 1.5 3.6 1.9l9.9 9.7z" fill="#00e5ff"/>
+      </svg>
+      <div class="play-text">
+        <span>GET IT ON</span>
+        <strong>Google Play</strong>
+      </div>
+    </a>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div>
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2>Privacy Policy</h2>
+        <p>Learn how Spendly AI collects, uses, safeguards, and respects your financial and personal data in accordance with Google Play policies.</p>
+      </div>
+      <a class="card-link" href="privacy-policy.html">Read Policy &rarr;</a>
+    </article>
+
+    <article class="card">
+      <div>
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h2>Terms &amp; Conditions</h2>
+        <p>Review the rules, in-app purchases, advertisements, trader disclosures, and limitations governing your use of Spendly AI.</p>
+      </div>
+      <a class="card-link" href="terms-and-conditions.html">Read Terms &rarr;</a>
+    </article>
+
+    <article class="card">
+      <div>
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+        </div>
+        <h2>Account Deletion</h2>
+        <p>Information and request methods for permanently removing your user account and associated personal data from Spendly AI.</p>
+      </div>
+      <a class="card-link" href="account-delete.html">Request Deletion &rarr;</a>
+    </article>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="meta-footer">
+    <div>
+      <strong>Developer:</strong> RakibSojib &bull; <strong>Application:</strong> Spendly AI (com.spendlyai.app)
+    </div>
+    <div>
+      Contact: <a href="mailto:rakibsojib77777@gmail.com">rakibsojib77777@gmail.com</a>
+    </div>
+  </div>
 </section>
 </div>
 </body>
